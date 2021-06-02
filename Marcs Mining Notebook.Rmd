@@ -1,0 +1,44 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+Import data procedre
+```{r}
+library(haven)
+mining <- read_sas("http://www.principlesofeconometrics.com/sas/mining.sas7bdat", 
+    NULL)
+```
+
+Wrangle data
+```{r}
+
+library(ggplot2)
+
+ggplot(mining) +
+ aes(x = YEAR, y = PRO) +
+ geom_boxplot(fill = "#0c4c8a") +
+ theme_minimal()
+
+
+```
+
+
+ggplot2 data viz
+```{r}
+p <- ggplot(mining) +
+ aes(x = PRO, y = POW) +
+ geom_point(size = 1L, colour = "#0c4c8a") +
+ theme_minimal()
+
+
+```
+
+
+Plotly
+```{r}
+library(plotly)
+ggplotly(p)
+
+```
+
