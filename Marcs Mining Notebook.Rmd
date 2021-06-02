@@ -31,7 +31,6 @@ p <- ggplot(mining) +
  geom_point(size = 1L, colour = "#0c4c8a") +
  theme_minimal()
 
-
 ```
 
 
