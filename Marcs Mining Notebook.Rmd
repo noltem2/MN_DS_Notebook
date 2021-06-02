@@ -1,5 +1,5 @@
 ---
-title: "R Notebook"
+title: "R Notebook - Mining Dataset"
 output: html_notebook
 ---
 
